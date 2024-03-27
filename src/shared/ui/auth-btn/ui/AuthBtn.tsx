@@ -7,7 +7,7 @@ export default function AuthBtn() {
   if (session) {
     return (
       <>
-        Профиль {session.user.name} <br />
+        Профиль для входа {session.user.name} <br />
         <button onClick={() => signOut()}>Выход</button>
       </>
     )
