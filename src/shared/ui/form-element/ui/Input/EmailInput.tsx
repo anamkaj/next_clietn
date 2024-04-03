@@ -1,30 +1,30 @@
-import { Person } from '@/src/shared/reused-type/form-type/form-person'
 import React from 'react'
+import { Person } from '@/src/shared/reused-type/form-type/form-person'
 import { FieldErrors, UseFormRegister } from 'react-hook-form'
-
+import ErrorInput from './ErrorInput'
 
 type InputName = {
   register: UseFormRegister<Person>
   errors: FieldErrors<Person>
+  required?: boolean
 }
-const emailReg = /^\S+@\S+\.\S+$/
 
-export const EmailInput = ({ register, errors }: InputName) => {
+export const EmailInput = ({ register, errors, required }: InputName) => {
+  const objError = {
+    name: 'email',
+    type: errors.email?.type.toString(),
+  }
+
   return (
     <div>
       <input
         className='w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500'
         placeholder='Почта'
         {...register('email', {
-          required: false,
-          pattern: emailReg,
+          required: required || false,
         })}
       />
-      {errors.email?.type == 'pattern' && (
-        <p className=' text-red-500 font-extralight text-sm'>
-          Проверьте адрес электронной почты
-        </p>
-      )}
+      <ErrorInput errors={objError} />
     </div>
   )
 }

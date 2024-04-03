@@ -18,7 +18,7 @@ export default function Search() {
   return (
     <>
       {width >= 768 ? (
-        <div className='relative w-[25vw]'>
+        <div className='relative w-[31vw]'>
           <div className=' flex items-center '>
             <input
               value={input}

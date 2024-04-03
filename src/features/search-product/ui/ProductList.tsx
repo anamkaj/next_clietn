@@ -40,10 +40,10 @@ export default function ProductList({
     <>
       {product?.length !== 0 && (
         <div className='absolute z-20 flex bg-white p-2 rounded-b-xl mt-1 w-full'>
-          <div className=' flex flex-col'>
+          <div className=' flex flex-col w-full'>
             {active && (
               <>
-                <div className=' overflow-y-auto h-[600px]'>
+                <div className=' overflow-y-auto h-[600px] '>
                   <ProductSearchList product={product} setActive={setActive} />
                 </div>
 

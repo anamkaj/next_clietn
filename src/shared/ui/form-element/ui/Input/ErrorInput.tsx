@@ -1,6 +1,7 @@
 'use client'
+import React from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import React, { useState } from 'react'
+import { rules } from '../lib/helper/rules'
 
 export type ErrorType = {
   errors: {
@@ -10,23 +11,6 @@ export type ErrorType = {
 }
 
 export default function ErrorInput({ errors }: ErrorType) {
-  const [typeErrors, setTypeErrors] = useState<string>('')
-  const rules: {
-    [key: string]: {
-      [key: string]: string
-    }
-  } = {
-    phone: {
-      required: 'Это обязательное поле заполнения',
-      pattern: 'Проверьте правильность ввода номера',
-    },
-    name: {
-      pattern: 'Используйте только буквы, без пробелов',
-      maxLength: 'Превышена максимальная длина',
-      minLength: 'Слишком коротко',
-    },
-  }
-
   const key = errors.name
   const errorMessage = errors?.type !== undefined && rules[key][errors.type]
 

@@ -22,11 +22,11 @@ export default async function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang='ru'>
+    <html lang='ru' className='h-full'>
       <body>
         <ProviderAuth>
           <Header />
-          <main>{children}</main>
+          <main className='min-h-full'>{children}</main>
           <Footer />
         </ProviderAuth>
       </body>

@@ -14,6 +14,9 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
     },
+    container:{
+      center: true,
+    },
     screens: {
       mobile: '380px',
       // => @media (min-width: 380px) { ... }
@@ -33,5 +36,6 @@ module.exports = {
       // => @media (min-width: 1920px) { ... }
     },
   },
+  
   plugins: [],
 }

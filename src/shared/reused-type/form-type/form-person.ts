@@ -5,6 +5,7 @@ export type Person = {
   surname?: string
   objectCity?: boolean
   internetTrue?: boolean
+  password?: string
 }
 
 export type OpenFormProp = {
