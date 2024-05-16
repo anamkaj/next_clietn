@@ -8,10 +8,11 @@ import {
 } from '@/src/shared/store/jotai/modal'
 import DesktopHeader from './DesktopHeader'
 import MobileHeader from './mobile'
-import { Widgets } from '@/src/features/widgets-contact'
+import { Widgets } from '@/src/widgets/widgets-contact'
 import { FormInstallSpecialist } from '@/src/entities/form-specialis'
 import { FormMounting } from '@/src/entities/form-mounting'
 import { Model } from '@/src/shared/ui/model-window'
+import { Chat } from '../../chat'
 
 export default function Header() {
   // Монтаж и Установка - кнопка
@@ -24,7 +25,7 @@ export default function Header() {
 
   return (
     <Metrika>
-      <Widgets>
+      <Chat>
         <div className='container mx-auto'>
           <DesktopHeader />
           <MobileHeader />
@@ -50,7 +51,7 @@ export default function Header() {
             </Model>
           </div>
         </div>
-      </Widgets>
+      </Chat>
     </Metrika>
   )
 }

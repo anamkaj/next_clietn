@@ -1,6 +1,5 @@
 'use client'
 import React from 'react'
-import { ProviderStor } from '@/src/app/provider'
 import { ProductCartProp } from '../model/type/type.cart'
 import { useLoading } from '@/src/shared/hook/useLoading'
 import { ProductLoader } from './pre-loader/Loader'
@@ -69,9 +68,8 @@ export default function Cart({ product, slug }: ProductCartProp) {
               </div>
 
               {/*Добавить в корзину*/}
-              <ProviderStor>
-                <ButtonCart key={cart.id} product={cart} />
-              </ProviderStor>
+
+              <ButtonCart key={cart.id} product={cart} />
             </div>
           </div>
         )

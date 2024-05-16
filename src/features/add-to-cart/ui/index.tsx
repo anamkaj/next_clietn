@@ -14,7 +14,7 @@ type PropCartPrise = {
 
 export default function AddProductStore({ product }: PropCartPrise) {
   const [_, setAddStoreForm] = useAtom(addStorButton)
-  const store = useAppSelector((state) => state.cartReducer.cart)
+  const store = useAppSelector((state) => state.cart.cart)
   const checkCartStore =
     store.length > 0 ? store.find((e) => e.id === product.id) : undefined
 

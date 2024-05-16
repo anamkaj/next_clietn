@@ -1,6 +1,5 @@
 import React from 'react'
 import MobileMenu from './MobileMenu'
-import { ProviderStor } from '@/src/app/provider'
 import { useWindowSize } from '@/src/shared/hook/useWindowSize'
 import { ButtonMain } from '@/src/shared/ui/button/button-header'
 import { Search } from '@/src/features/search-product'
@@ -102,9 +101,9 @@ export default function MobileHeader() {
         </div>
       </div>
       <MobileMenu />
-      <ProviderStor>
+      
         <ShopCardHeader />
-      </ProviderStor>
+      
     </div>
   )
 }

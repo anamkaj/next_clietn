@@ -1,6 +1,5 @@
 'use client'
 import React from 'react'
-import { ProviderStor } from '@/src/app/provider'
 import { FormInstallSpecialist } from '@/src/entities/form-specialis'
 import { PopupAddToStore } from '@/src/features/popup-fom-add-product'
 import { IProduct } from '@/src/shared/reused-type/product'
@@ -12,7 +11,6 @@ import {
 import { FastOrderCart } from '@/src/widgets/fast-order-popup'
 import { useAtom } from 'jotai'
 import { Model } from '@/src/shared/ui/model-window'
-
 
 export default function ModelLayout({ product }: { product: IProduct }) {
   //Состаяние модальных окон
@@ -26,9 +24,7 @@ export default function ModelLayout({ product }: { product: IProduct }) {
         active={addStoreForm}
         titleModel={'Товар добавлен в корзину'}
       >
-        <ProviderStor>
-          <PopupAddToStore setActive={setAddStoreForm} product={product} />
-        </ProviderStor>
+        <PopupAddToStore setActive={setAddStoreForm} product={product} />
       </Model>
 
       {/*Модальное окно/ Быстрый заказ */}

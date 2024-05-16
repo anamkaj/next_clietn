@@ -1,4 +1,4 @@
-import { getMainCategory } from '@/src/entities/category/api/get.category'
+import { getMainCategory } from '@/src/shared/api'
 import { getAllProductBySiteMap } from '@/src/shared/api/api-product/get-product'
 import { ICategory } from '@/src/shared/reused-type/category'
 import { IProduct } from '@/src/shared/reused-type/product'

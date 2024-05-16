@@ -1,5 +1,4 @@
 'use client'
-import { ProviderStor } from '@/src/app/provider'
 import { AnimatePresence, motion } from 'framer-motion'
 import React from 'react'
 import { BsArrowLeftCircle, BsList } from 'react-icons/bs'
@@ -55,9 +54,8 @@ export default function MobileMenu() {
                     <h2 className=' font-semibold text-lg'>Каталог</h2>
                   </div>
                 </div>
-                <ProviderStor>
-                  <MobileShopCart setSetActive={setActive} />
-                </ProviderStor>
+
+                <MobileShopCart setSetActive={setActive} />
               </div>
 
               <ListMenu />

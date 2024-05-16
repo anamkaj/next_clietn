@@ -37,7 +37,7 @@ export const AddedProducts = ({ data }: { data: addCartStore[] }) => {
               <div className=' flex flex-col items-center'>
                 <img
                   className=' w-[100px]'
-                  src={`https://tmk-v.ru:8080/img/${x.imgFolder}/${x.img}`}
+                  src={`https://tmk-v.ru:8081/img/${x.imgFolder}/${x.img}`}
                   alt=''
                 />
                 <p className=' text-center font-thin'>{x.title}</p>

@@ -5,9 +5,7 @@ import Link from 'next/link'
 import VisibleCartProduct from './VisibleCartProduct'
 
 export default function ShopCardHeader() {
-  const countProductCart = useAppSelector(
-    (state) => state.cartReducer.cart,
-  ).length
+  const countProductCart = useAppSelector((state) => state.cart.cart).length
 
   return (
     <>

@@ -25,7 +25,7 @@ export default function MainDisplay() {
             height={768}
             width={1366}
             src={
-              'https://tmk-v.ru:8080/img/landing_page_imag/ohrana-pojarka/profyre.png'
+              'https://tmk-v.ru:8081/img/landing_page_imag/ohrana-pojarka/profyre.png'
             }
             className='w-[500px] xl:w-full rounded-lg p-2'
             alt='Установка пожарной сигнализации в Краснодаре'

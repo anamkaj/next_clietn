@@ -8,7 +8,7 @@ type MobileShopCartProp = {
 }
 
 export const MobileShopCart = ({ setSetActive }: MobileShopCartProp) => {
-  const countCart = useAppSelector((state) => state.cartReducer.cart).length
+  const countCart = useAppSelector((state) => state.cart.cart).length
   const dispatch = useAppDispatch()
 
   //Добавление товаров из localstorege

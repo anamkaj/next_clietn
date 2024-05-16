@@ -1,5 +1,5 @@
-import { Profile } from '@/src/pages/profile-page'
 import React from 'react'
+import { Profile } from '@/src/pages/profile-page'
 
 export default async function page() {
   return (

@@ -29,7 +29,7 @@ export default function TypesServices({ data }: ServicesType) {
   return (
     <div className='relative'>
       <Image
-        src={`https://tmk-v.ru:8080/img/landing_page_imag/ohrana-pojarka/background/blog2.jpg`}
+        src={`https://tmk-v.ru:8081/img/landing_page_imag/ohrana-pojarka/background/blog2.jpg`}
         alt=''
         quality={90}
         fill={true}

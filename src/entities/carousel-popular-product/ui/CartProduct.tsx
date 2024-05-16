@@ -1,5 +1,5 @@
 'use client'
-import { ProviderStor } from '@/src/app/provider'
+
 import Image from 'next/image'
 import Link from 'next/link'
 import { FaEye } from 'react-icons/fa'
@@ -40,7 +40,7 @@ export const PopularProduct = ({ cart }: { cart: IProduct }) => {
         <Image
           height={250}
           width={250}
-          src={`https://tmk-v.ru:8080/img/${cart.imgFolder}/${cart.imgLink[0]}`}
+          src={`https://tmk-v.ru:8081/img/${cart.imgFolder}/${cart.imgLink[0]}`}
           alt={cart.altImg}
         />
       </Link>
@@ -130,9 +130,8 @@ export const PopularProduct = ({ cart }: { cart: IProduct }) => {
         </div>
 
         {/*Добавить в корзину*/}
-        <ProviderStor>
-          <ButtonCart key={cart.id} product={cart} />
-        </ProviderStor>
+
+        <ButtonCart key={cart.id} product={cart} />
       </div>
     </div>
   )

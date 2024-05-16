@@ -19,7 +19,7 @@ export default function Maintenance() {
       </h2>
       <div className='container mx-auto grid grid-cols-1 md:grid-cols-2 items-center mt-10 gap-4 p-4'>
         <Image
-          src={`https://tmk-v.ru:8080/img/landing_page_imag/ohrana-pojarka/fire-alarm-systems-installation-service.jpg`}
+          src={`https://tmk-v.ru:8081/img/landing_page_imag/ohrana-pojarka/fire-alarm-systems-installation-service.jpg`}
           alt=''
           quality={90}
           width={700}

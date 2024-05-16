@@ -18,7 +18,7 @@ export default function OpenForm() {
   return (
     <div className='relative mt-10 p-8'>
       <Image
-        src={`https://tmk-v.ru:8080/img/landing_page_imag/ohrana-pojarka/background/out.png`}
+        src={`https://tmk-v.ru:8081/img/landing_page_imag/ohrana-pojarka/background/out.png`}
         alt=''
         quality={90}
         fill={true}
@@ -78,7 +78,7 @@ export default function OpenForm() {
           transition={{ duration: 0.6 }}
         >
           <Image
-            src={`https://tmk-v.ru:8080/img/landing_page_imag/ohrana-pojarka/background/rabform-1.png`}
+            src={`https://tmk-v.ru:8081/img/landing_page_imag/ohrana-pojarka/background/rabform-1.png`}
             height={300}
             width={300}
             alt='Vladimir-vector'
@@ -89,7 +89,7 @@ export default function OpenForm() {
         <div className=' flex flex-col justify-end mt-10 xl:mt-0 '>
           <div className='mb-auto flex flex-col items-center'>
             <Image
-              src={`https://tmk-v.ru:8080/img/landing_page_imag/ohrana-pojarka/system.png`}
+              src={`https://tmk-v.ru:8081/img/landing_page_imag/ohrana-pojarka/system.png`}
               height={400}
               width={400}
               alt='Vladimir-vector'

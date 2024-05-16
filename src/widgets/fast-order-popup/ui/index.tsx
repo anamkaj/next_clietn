@@ -1,6 +1,5 @@
 'use client'
 import React, { useState } from 'react'
-import { ProviderStor } from '@/src/app/provider'
 import { CounterProduct } from '@/src/entities/count-product-add'
 import { FormFastOrder } from './FormFastOrder'
 import { IProduct } from '@/src/shared/reused-type/product'
@@ -22,7 +21,7 @@ export const FastOrderCart = ({
         <div className=' '>
           <img
             className=' w-[15vh]'
-            src={`https://tmk-v.ru:8080/img/${product.imgFolder}/${product.imgLink[0]}`}
+            src={`https://tmk-v.ru:8081/img/${product.imgFolder}/${product.imgLink[0]}`}
             alt={product.altImg}
           />
         </div>
@@ -42,13 +41,11 @@ export const FastOrderCart = ({
             </p>
           </div>
           <div className=' flex justify-center'>
-            <ProviderStor>
-              <CounterProduct
-                setCountPopupProduct={setCountFastOrderProduct}
-                countPopupProduct={countFastOrderProduct}
-                product={product}
-              />
-            </ProviderStor>
+            <CounterProduct
+              setCountPopupProduct={setCountFastOrderProduct}
+              countPopupProduct={countFastOrderProduct}
+              product={product}
+            />
           </div>
         </div>
       </div>

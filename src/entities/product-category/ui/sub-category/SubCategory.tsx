@@ -26,7 +26,7 @@ export default async function SubCategory({
               <div className=' flex flex-col items-center justify-center gap-2'>
                 <Image
                   className='mt-4'
-                  src={`https://tmk-v.ru:8080/img/${x.folderImg}/${x.img}`}
+                  src={`https://tmk-v.ru:8081/img/${x.folderImg}/${x.img}`}
                   alt={''}
                   width={80}
                   height={80}

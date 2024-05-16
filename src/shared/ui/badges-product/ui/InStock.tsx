@@ -24,7 +24,7 @@ export default function InStock({ product }: { product: IProduct }) {
       <div>
         <img
           className=' w-16 '
-          src={`https://tmk-v.ru:8080/img/brend/${product.brandImg}`}
+          src={`https://tmk-v.ru:8081/img/brend/${product.brandImg}`}
           alt=''
         />
       </div>

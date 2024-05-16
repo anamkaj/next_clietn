@@ -12,7 +12,7 @@ export default function CarouselImage({ product }: { product: IProduct }) {
   useEffect(() => {
     setImg({
       id: 0,
-      url: `https://tmk-v.ru:8080/img/${product.imgFolder}/${product.imgLink[0]}`,
+      url: `https://tmk-v.ru:8081/img/${product.imgFolder}/${product.imgLink[0]}`,
     })
   }, [product])
   return (
@@ -39,13 +39,13 @@ export default function CarouselImage({ product }: { product: IProduct }) {
               key={index}
             >
               <img
-                src={`https://tmk-v.ru:8080/img/${product.imgFolder}/${data}`}
+                src={`https://tmk-v.ru:8081/img/${product.imgFolder}/${data}`}
                 alt={product.altImg}
                 key={index}
                 onClick={() => {
                   handleClick(
                     index,
-                    `https://tmk-v.ru:8080/img/${product.imgFolder}/${data}`,
+                    `https://tmk-v.ru:8081/img/${product.imgFolder}/${data}`,
                   )
                 }}
               />

@@ -34,7 +34,7 @@ export default function ProductSearchList({
                 <Image
                   height={60}
                   width={60}
-                  src={`https://tmk-v.ru:8080/img/${x.imgFolder}/${x.imgLink[0]}`}
+                  src={`https://tmk-v.ru:8081/img/${x.imgFolder}/${x.imgLink[0]}`}
                   alt={x.altImg}
                 />
                 <h2 className=' p-2 font-thin text-sm'> {x.title}</h2>

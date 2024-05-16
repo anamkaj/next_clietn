@@ -1,6 +1,26 @@
 import { Backend_URL } from '@/src/shared/lib/const/backend/url'
 import { Session, User } from 'next-auth'
+import { JWT } from 'next-auth/jwt'
 import CredentialsProvider from 'next-auth/providers/credentials'
+
+async function refreshToken(token: JWT): Promise<JWT> {
+  try {
+    const res = await fetch(Backend_URL + '/auth/refresh', {
+      method: 'POST',
+      headers: {
+        authorization: `Refresh ${token.backendTokens.refreshToken}`,
+      },
+    })
+    const response: User = await res.json()
+
+    return {
+      ...token,
+      backendTokens: response.backendTokens,
+    }
+  } catch (error) {
+    throw new Error(`Ошибка обновления refreshToken ${error}`)
+  }
+}
 
 export const authOptions = {
   providers: [
@@ -12,7 +32,7 @@ export const authOptions = {
         password: { label: 'Password', type: 'password' },
       },
 
-      async authorize(credentials, req) {
+      async authorize(credentials) {
         if (!credentials?.email || !credentials?.password) return null
         const { email, password } = credentials
         const res = await fetch(Backend_URL + '/auth/login', {
@@ -25,7 +45,6 @@ export const authOptions = {
         })
 
         if (res.status == 401) {
-          console.log(res.statusText)
           return null
         }
         const user: User = await res.json()
@@ -36,12 +55,16 @@ export const authOptions = {
   pages: { signIn: '/signin', signOut: '/' },
 
   callbacks: {
-    async jwt({ token, user }: { token: any; user: User }) {
-      console.log('Tokken', token)
+    async jwt({ token, user }: { token: JWT; user: User }) {
       if (user) return { ...token, ...user }
-      return token
+
+      if (new Date().getTime() < token.backendTokens.expiresIn) {
+        return token
+      }
+
+      return await refreshToken(token)
     },
-    async session({ token, session }: { token: any; session: Session }) {
+    async session({ token, session }: { token: JWT; session: Session }) {
       session.user = token.user
       session.backendTokens = token.backendTokens
 

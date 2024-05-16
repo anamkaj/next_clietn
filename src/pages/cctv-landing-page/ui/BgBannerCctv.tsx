@@ -3,7 +3,7 @@ import React from 'react'
 import Image from 'next/image'
 
 export default async function BannerCctv() {
-  const imgBanner = 'https://tmk-v.ru:8080/img/landing_page_imag/vecteezy.jpg'
+  const imgBanner = 'https://tmk-v.ru:8081/img/landing_page_imag/vecteezy.jpg'
   return (
     <>
       <Image

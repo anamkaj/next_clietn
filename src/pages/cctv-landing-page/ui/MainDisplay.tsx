@@ -15,7 +15,7 @@ export default function MainDisplay() {
         <Image
           height={768}
           width={1366}
-          src={'https://tmk-v.ru:8080/img/landing_page_imag/baner(4).webp'}
+          src={'https://tmk-v.ru:8081/img/landing_page_imag/baner(4).webp'}
           className='w-[500px] xl:w-full'
           alt='Установка видеонаблюдения в Краснодаре'
         />

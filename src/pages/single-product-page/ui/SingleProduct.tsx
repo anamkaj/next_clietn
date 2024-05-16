@@ -1,7 +1,6 @@
 import React from 'react'
 import ServicesBtn from '../../../entities/tab-info-single-product/ui/button-tab/ServicesBtn'
 import { countViewIncrement } from '@/src/entities/tab-info-single-product/lib/hook/count.view.inc'
-import { ProviderStor } from '@/src/app/provider'
 import { CallSingleCart } from '@/src/widgets/call-specialist'
 import { HeadSingleProduct } from '@/src/entities/single-product-head'
 import { CarouselImage } from '@/src/entities/single-product-images'
@@ -15,7 +14,7 @@ import { CartPrice } from '@/src/entities/single-product-price'
 import { AddProductStore } from '@/src/features/add-to-cart'
 import { OrderOneClick } from '@/src/entities/order-one-click'
 import ModelLayout from './ModelLayout'
-import { getSingleProduct } from '@/src/shared/api/api-product/get-product'
+import { getSingleProduct } from '@/src/shared/api'
 
 export default async function SingleProduct({ slug }: { slug: string }) {
   const data = await getSingleProduct(Number(slug[2]))
@@ -45,13 +44,13 @@ export default async function SingleProduct({ slug }: { slug: string }) {
         {/*Карточка добавления в корзину (справа)*/}
         <div className='w-full shadow-lg border rounded-lg p-4'>
           <CartPrice product={product} />
-          <ProviderStor>
-            {/*кнопка добавить в корзину */}
-            <AddProductStore product={product} price={product.price} />
-            {/* Заказ в один клик */}
 
-            <OrderOneClick />
-          </ProviderStor>
+          {/*кнопка добавить в корзину */}
+          <AddProductStore product={product} price={product.price} />
+          {/* Заказ в один клик */}
+
+          <OrderOneClick />
+
           <CallSingleCart />
         </div>
       </div>

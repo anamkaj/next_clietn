@@ -7,7 +7,7 @@ type PriceProp = {
 }
 
 export const useCalcPriceProduct = ({ data }: PriceProp) => {
-  const totalCart = useAppSelector((state) => state.cartReducer.total)
+  const totalCart = useAppSelector((state) => state.cart.total)
   const [totalCartPrice, setTotalCartPrice] = useState<number>(0)
   const [totalSale, setTotalSale] = useState<number>(0)
 

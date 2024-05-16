@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 import { EmailInput } from '@/src/shared/ui/form-element'
 import { Person } from '@/src/shared/reused-type/form-type/form-person'
@@ -7,6 +7,7 @@ import { signIn, useSession } from 'next-auth/react'
 import Password from '@/src/shared/ui/form-element/ui/Input/Password'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
+import { useRouter } from 'next/navigation'
 
 const schema = z.object({
   password: z.string().min(8).max(8),
@@ -14,7 +15,9 @@ const schema = z.object({
 })
 
 export default function FormAuth() {
+  const router = useRouter()
   const session = useSession()
+
   const {
     register,
     handleSubmit,
@@ -28,9 +31,18 @@ export default function FormAuth() {
     await signIn('credentials', {
       email: data.email,
       password: data.password,
-      callbackUrl: '/profile',
     })
   }
+
+  useEffect(() => {
+    if (session.data?.user?.role === 'ADMIN') {
+      router.push('/dashboard')
+    }
+
+    if (session.data?.user?.role === 'USER') {
+      router.push('/profile')
+    }
+  }, [session])
 
   return (
     <>

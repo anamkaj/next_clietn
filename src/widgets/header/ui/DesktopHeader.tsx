@@ -1,6 +1,5 @@
 'use client'
 import React from 'react'
-import { ProviderStor } from '@/src/app/provider'
 import { ButtonMain } from '@/src/shared/ui/button/button-header'
 import { Search } from '@/src/features/search-product'
 import { ShopCardHeader } from '@/src/entities/shop-cart'
@@ -76,9 +75,8 @@ export default function DesktopHeader() {
         <Search />
 
         <Contact />
-        <ProviderStor>
-          <ShopCardHeader />
-        </ProviderStor>
+
+        <ShopCardHeader />
 
         {session.status !== 'authenticated' ? (
           <ButtonMain

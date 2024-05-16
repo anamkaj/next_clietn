@@ -1,7 +1,7 @@
 import React from 'react'
-import { removeToCart } from '@/src/app/Redux/Product/cartSlise'
 import { useAppDispatch } from '@/src/app/Redux/storeHook'
 import { RemoveCartType } from '../model/type/button-type'
+import { removeToCart } from '@/src/app/Redux/Product/cartSliсe'
 
 export default function RemoveProductToStor({ product }: RemoveCartType) {
   const dispatch = useAppDispatch()

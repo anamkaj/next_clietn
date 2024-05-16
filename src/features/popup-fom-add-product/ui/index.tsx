@@ -1,7 +1,6 @@
 'use client'
 import React, { useState } from 'react'
 import { ContinueShopping, LinkToCart } from './Button'
-import { ProviderStor } from '@/src/app/provider'
 import { IProduct } from '@/src/shared/reused-type/product'
 import { CounterProduct } from '@/src/entities/count-product-add'
 import { useSumCount } from '../lib/hook/sum-count'
@@ -19,7 +18,7 @@ export const PopupAddToStore = ({ setActive, product }: PropPopup) => {
       <div className=' flex flex-col items-center justify-center'>
         <img
           className=' w-[15vh]'
-          src={`https://tmk-v.ru:8080/img/${product.imgFolder}/${product.imgLink[0]}`}
+          src={`https://tmk-v.ru:8081/img/${product.imgFolder}/${product.imgLink[0]}`}
           alt={product.altImg}
         />
 
@@ -37,13 +36,12 @@ export const PopupAddToStore = ({ setActive, product }: PropPopup) => {
               ₽
             </p>
           </div>
-          <ProviderStor>
-            <CounterProduct
-              setCountPopupProduct={setCountPopupProduct}
-              countPopupProduct={countPopupProduct}
-              product={product}
-            />
-          </ProviderStor>
+
+          <CounterProduct
+            setCountPopupProduct={setCountPopupProduct}
+            countPopupProduct={countPopupProduct}
+            product={product}
+          />
         </div>
       </div>
       <div>

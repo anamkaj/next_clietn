@@ -11,10 +11,12 @@ declare module 'next-auth' {
       rating: string
       level: string
       avatar: string
+      role: string
     }
     backendTokens: {
       accessToken: string
       refreshToken: string
+      expiresIn: number
     }
   }
 
@@ -27,10 +29,12 @@ declare module 'next-auth' {
       rating: string
       level: string
       avatar: string
+      role: string
     }
     backendTokens: {
       accessToken: string
       refreshToken: string
+      expiresIn: number
     }
   }
 }
@@ -45,10 +49,12 @@ declare module 'next-auth/jwt' {
       rating: string
       level: string
       avatar: string
+      role: string
     }
     backendTokens: {
       accessToken: string
       refreshToken: string
+      expiresIn: number
     }
   }
 }

@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import dynamic from 'next/dynamic'
 import { Footer } from '@/src/widgets/footer'
 import { ProviderAuth } from '@/src/app/provider'
+import { ProviderStor } from '@/src/app/provider'
 import HeaderLoader from '@/src/widgets/header/ui/pre-loader/HeaderLoader'
 
 const Header = dynamic(() => import('@/src/widgets/header'), {
@@ -24,11 +25,13 @@ export default async function RootLayout({
   return (
     <html lang='ru' className='h-full'>
       <body>
-        <ProviderAuth>
-          <Header />
-          <main className='min-h-full'>{children}</main>
-          <Footer />
-        </ProviderAuth>
+        <ProviderStor>
+          <ProviderAuth>
+            <Header />
+            <main className='min-h-full'>{children}</main>
+            <Footer />
+          </ProviderAuth>
+        </ProviderStor>
       </body>
     </html>
   )

@@ -21,7 +21,7 @@ export default function ImgProductCart({ product, url }: imgProps) {
         <Image
           height={250}
           width={250}
-          src={`https://tmk-v.ru:8080/img/${product.imgFolder}/${product.imgLink[0]}`}
+          src={`https://tmk-v.ru:8081/img/${product.imgFolder}/${product.imgLink[0]}`}
           alt={product.altImg}
         />
       </Link>

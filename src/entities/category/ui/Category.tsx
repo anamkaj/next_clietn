@@ -2,8 +2,8 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import CategoryDownLevel from './CategoryDownLevel'
-import { getMainCategory } from '../api/get-category'
 import { ICategory } from '@/src/shared/reused-type/category'
+import { getMainCategory } from '@/src/shared/api'
 
 export default async function Category() {
   const category: ICategory[] = await getMainCategory()
@@ -20,7 +20,7 @@ export default async function Category() {
               <div className=' flex h-32 w-32 items-center '>
                 <Image
                   className='mt-4'
-                  src={`https://tmk-v.ru:8080/img/${e.folderImg}/${e.img}`}
+                  src={`https://tmk-v.ru:8081/img/${e.folderImg}/${e.img}`}
                   alt={''}
                   width={200}
                   height={200}

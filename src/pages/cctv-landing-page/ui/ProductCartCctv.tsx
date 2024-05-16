@@ -20,7 +20,7 @@ export default async function ProductCartCctv() {
                 <Image
                   height={200}
                   width={200}
-                  src={`https://tmk-v.ru:8080/img/landing_page_imag/${namaCart[cart]}`}
+                  src={`https://tmk-v.ru:8081/img/landing_page_imag/${namaCart[cart]}`}
                   alt='Установка видеонаблюдения в Краснодаре'
                 />
               </div>

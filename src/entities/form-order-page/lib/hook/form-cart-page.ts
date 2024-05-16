@@ -1,12 +1,13 @@
 import { SubmitHandler } from 'react-hook-form'
 import { useAppSelector } from '@/src/app/Redux/storeHook'
-import { IFormCartPage, Person } from '@/models/form'
+
 import { useState } from 'react'
 import { postFormCartPage } from '../../api/send-form-order-page'
+import { IFormCartPage, Person } from '@/src/shared/reused-type/form-type/form-person'
 
 export const useFormCartPage = () => {
-  const storCart = useAppSelector((state) => state.cartReducer.cart)
-  const totalPriceCart = useAppSelector((state) => state.cartReducer.total)
+  const storCart = useAppSelector((state) => state.cart.cart)
+  const totalPriceCart = useAppSelector((state) => state.cart.total)
   const [response, setResponse] = useState<
     | {
         data: any

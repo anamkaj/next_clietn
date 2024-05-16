@@ -2,7 +2,7 @@ import React from 'react'
 import {
   incrementCounter,
   decrementCounter,
-} from '../../../../app/Redux/Product/cartSlise'
+} from '../../../../app/Redux/Product/cartSliсe'
 import { useAppDispatch } from '../../../../app/Redux/storeHook'
 import { IProduct } from '@/src/shared/reused-type/product'
 

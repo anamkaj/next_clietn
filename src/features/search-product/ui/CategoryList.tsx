@@ -25,7 +25,7 @@ export default function CategoryList({
               <Image
                 height={40}
                 width={40}
-                src={`https://tmk-v.ru:8080/img/${x.folderImg}/${x.img}`}
+                src={`https://tmk-v.ru:8081/img/${x.folderImg}/${x.img}`}
                 alt={x.name}
               />
               {x.name.length > 20 ? (

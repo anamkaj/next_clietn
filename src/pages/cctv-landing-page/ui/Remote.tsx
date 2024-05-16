@@ -20,7 +20,7 @@ export default async function Remote() {
             <Image
               height={300}
               width={300}
-              src={`https://tmk-v.ru:8080/img/landing_page_imag/22_(1).png`}
+              src={`https://tmk-v.ru:8081/img/landing_page_imag/22_(1).png`}
               className='  '
               alt='Монтаж видеонаблюдения в Краснодаре'
             />
@@ -30,7 +30,7 @@ export default async function Remote() {
           <Image
             height={600}
             width={600}
-            src={`https://tmk-v.ru:8080/img/landing_page_imag/22_(11).png`}
+            src={`https://tmk-v.ru:8081/img/landing_page_imag/22_(11).png`}
             className='  '
             alt='Монтаж видеонаблюдения в Краснодаре'
           />

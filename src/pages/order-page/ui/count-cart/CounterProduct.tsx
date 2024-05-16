@@ -1,8 +1,5 @@
-import {
-  decrementCounter,
-  incrementCounter,
-  removeToCart,
-} from '@/src/app/Redux/Product/cartSlise'
+
+import { decrementCounter, incrementCounter, removeToCart } from '@/src/app/Redux/Product/cartSliсe'
 import { useAppDispatch } from '@/src/app/Redux/storeHook'
 import { addCartStore } from '@/src/shared/reused-type/redax'
 import React, { useEffect, useRef } from 'react'
