@@ -77,7 +77,7 @@ export default function SocketContextProvider({
 
   useEffect(() => {
     if (user.user.id !== 0) {
-      const socket = io('http://localhost:5000', {})
+      const socket = io('https://tmk-v.ru:5011', {})
       setSocket(socket)
 
       socket.on('newMessages', (event: ResponseMessagesSocket) => {
