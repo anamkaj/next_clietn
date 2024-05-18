@@ -1,6 +1,5 @@
 import CatalogProductPage from '@/src/views/product-catalog-page'
 
-
 type PropCategoryUpLevel = {
   params: { slug: string[] }
   searchParams: { [key: string]: string }
