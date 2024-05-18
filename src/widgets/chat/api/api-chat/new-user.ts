@@ -5,7 +5,7 @@ type User = {
 
 export const postNewUserChat = async (user: User) => {
   try {
-    const data = await fetch(`http://localhost:5011/api/registration`, {
+    const data = await fetch(`https://tmk-v.ru:5011/api/registration`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(user),
