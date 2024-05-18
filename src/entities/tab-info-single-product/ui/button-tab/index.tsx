@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+
 import CharacteristicsBtn from './CharacteristicsBtn'
 import DescriptionBtn from './DescriptionBtn'
 import ReviewsBtn from './ReviewsBtn'

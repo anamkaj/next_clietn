@@ -2,7 +2,7 @@
 import { addToCart, removeToCart } from '@/src/app/Redux/Product/cartSliсe'
 import { useAppDispatch, useAppSelector } from '@/src/app/Redux/storeHook'
 import { IProduct } from '@/src/shared/reused-type/product'
-import React from 'react'
+
 import { BsFillCartCheckFill } from 'react-icons/bs'
 import { BsCartDash } from 'react-icons/bs'
 

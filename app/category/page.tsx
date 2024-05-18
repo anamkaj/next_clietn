@@ -1,5 +1,5 @@
-import React from 'react'
-import { CategoryPage } from '@/src/pages/category-page'
+import CategoryPage from '@/src/views/category-page'
+
 
 export default async function MainPageCategory() {
   return (

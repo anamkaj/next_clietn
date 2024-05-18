@@ -1,4 +1,4 @@
-import React from 'react'
+
 import CarouselProduct from '@/src/entities/carousel-popular-product/ui/Carousel'
 
 export default async function CarouselPopularProduct({

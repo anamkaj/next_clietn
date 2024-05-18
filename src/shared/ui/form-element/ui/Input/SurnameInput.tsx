@@ -1,7 +1,7 @@
-import React from 'react'
+
 import { FieldErrors, UseFormRegister } from 'react-hook-form'
 import { nameReg } from './NameInput'
-import { IFormCartPage } from '@/models/form'
+import { IFormCartPage } from '@/src/shared/reused-type/form-type/form-person'
 
 type InputSurname = {
   register: UseFormRegister<IFormCartPage>

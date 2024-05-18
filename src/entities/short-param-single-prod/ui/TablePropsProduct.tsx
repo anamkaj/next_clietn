@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { IProduct } from '@/src/shared/reused-type/product'
 
 export default function TablePropsProduct({ product }: { product: IProduct }) {

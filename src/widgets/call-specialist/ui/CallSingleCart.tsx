@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+
 import { requestInstallationBtn } from '@/src/shared/store/jotai/modal'
 import { useAtom } from 'jotai'
 import { FcFlashOn } from 'react-icons/fc'

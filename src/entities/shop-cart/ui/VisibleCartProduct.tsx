@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import React from 'react'
+
 import { AiOutlineShoppingCart } from 'react-icons/ai'
 import { useVisibleCartProduct } from '../lib/hook/visible-cart'
 import { PropVisibleCartProduct } from '../model/cart-type'

@@ -12,7 +12,7 @@ export default function SortFilterProduct() {
   const pathname = usePathname()
   const searchParams = useSearchParams()
   const [paramFilterStore, setParamFilterStore] = useAtom(valueHeaderFilter)
-  const sortFilter = searchParams.get('sort')
+  const sortFilter = searchParams!.get('sort')
   const refSelect = useRef<string>(
     sortFilter !== null ? sortFilter : 'popularity_desc',
   )
@@ -20,8 +20,8 @@ export default function SortFilterProduct() {
 
   // ______________________________________________________________________
 
-  const url = searchParams.toString()
-  const idCategory = pathname.split('/')[3]
+  const url = searchParams!.toString()
+  const idCategory = pathname!.split('/')[3]
   const stateParam: { id: string; param: string } = {
     id: idCategory,
     param: refSelect.current,

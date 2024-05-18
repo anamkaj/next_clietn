@@ -1,4 +1,4 @@
-import React from 'react'
+
 import MobileMenu from './MobileMenu'
 import { useWindowSize } from '@/src/shared/hook/useWindowSize'
 import { ButtonMain } from '@/src/shared/ui/button/button-header'

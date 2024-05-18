@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Cart from './Cart'
 import Pagination from './pagination/Pagination'
 import { IProduct } from '@/src/shared/reused-type/product'

@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { IProduct } from '@/src/shared/reused-type/product'
 import { Metadata } from 'next'
 import { getSingleProduct } from '@/src/shared/api'

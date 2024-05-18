@@ -1,11 +1,11 @@
 'use client'
-import React from 'react'
+
 import { BsExclamationCircle } from 'react-icons/bs'
-import { SendReviews } from '@/models/reviews'
 import { useForm } from 'react-hook-form'
 import TextArea from './TextArea'
 import { usePostReviewsToServer } from '../lib/hook/post.reviews'
 import { IProduct } from '@/src/shared/reused-type/product'
+import { SendReviews } from '@/src/shared/reused-type/reviews'
 
 export default function TabReviewsPostForm({
   product,

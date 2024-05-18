@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { ICategory } from '../model/type.category'
 import BreadCrumbs from './bread-crumbs/BreadCrumbs'
 import Description from './description/Description'

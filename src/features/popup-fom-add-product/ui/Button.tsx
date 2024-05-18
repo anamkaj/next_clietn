@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import React from 'react'
+
 
 type PropBtn = {
   setActive: React.Dispatch<React.SetStateAction<boolean>>

@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+
 import { ProductCartProp } from '../model/type/type.cart'
 import { useLoading } from '@/src/shared/hook/useLoading'
 import { ProductLoader } from './pre-loader/Loader'

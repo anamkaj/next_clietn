@@ -1,5 +1,5 @@
-import React from 'react'
-import { CatalogProductPage } from '@/src/pages/product-catalog-page'
+import CatalogProductPage from '@/src/views/product-catalog-page'
+
 
 type PropCategoryUpLevel = {
   params: { slug: string[] }

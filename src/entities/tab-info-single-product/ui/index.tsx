@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+
 import { tab } from '../lib/tab-name'
 import TabReviewsPostForm from './TabReviewsPostForm'
 import TabReviews from './TabReviews'

@@ -1,5 +1,5 @@
-import React from 'react'
-import { LendingFireAlarm } from '@/src/pages/fire-alarm-page'
+
+import LendingFireAlarm from '@/src/views/fire-alarm-page'
 
 export default function page() {
   return <LendingFireAlarm />

@@ -1,9 +1,9 @@
 'use client'
 import React, { useEffect, useState } from 'react'
-import ProductSearchList from './ProductSearchList'
 import CategoryList from '../CategoryList'
 import ErrorSearch from '../ErrorSearch'
 import { ProductListProp } from '../../model/type/search-type'
+import ProductSearchList from '../ProductSearchList'
 
 export default function ProductList({
   product,

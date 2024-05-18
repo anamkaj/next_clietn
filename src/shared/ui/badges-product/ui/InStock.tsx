@@ -1,5 +1,5 @@
 import { IProduct } from '@/src/shared/reused-type/product'
-import React from 'react'
+
 import { BsCheck } from 'react-icons/bs'
 
 export default function InStock({ product }: { product: IProduct }) {

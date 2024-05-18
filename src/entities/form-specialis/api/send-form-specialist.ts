@@ -1,4 +1,4 @@
-import { FormReq } from '@/src/shared/reused-type/form-type/form'
+import { FormReq } from '@/src/shared/reused-type/form-type/form-short'
 import axios from 'axios'
 
 export const postFormFeedback = async (params: FormReq) => {

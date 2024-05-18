@@ -1,4 +1,5 @@
-import { IProduct } from "@/models/product";
+
+import { IProduct } from "@/src/shared/reused-type/product";
 import React from "react";
 
 interface BadgesProps {

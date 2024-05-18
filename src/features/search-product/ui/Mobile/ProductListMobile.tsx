@@ -2,7 +2,8 @@
 import React, { useEffect, useState } from 'react'
 import ProductSearchList from '../ProductSearchList'
 import CategoryList from '../CategoryList'
-import { ProductListMobileProp } from '../../../src/features/search-product/model/type/search.type'
+import { ProductListMobileProp } from '../../model/type/search-type'
+
 
 export default function ProductListMobile({
   product,

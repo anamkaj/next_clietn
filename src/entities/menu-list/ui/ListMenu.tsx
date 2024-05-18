@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link'
-import React from 'react'
+
 import { useGetCategoryMobile } from '../lib/hook/get.category.mobile'
 import { BsCaretRight } from 'react-icons/bs'
 import { useAtom } from 'jotai'

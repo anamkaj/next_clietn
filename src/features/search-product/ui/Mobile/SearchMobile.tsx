@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+
 import { BsArrowLeftCircle } from 'react-icons/bs'
 import { MdClear } from 'react-icons/md'
 import ProductListMobile from './ProductListMobile'

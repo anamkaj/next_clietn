@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { useAppDispatch } from '@/src/app/Redux/storeHook'
 import { RemoveCartType } from '../model/type/button-type'
 import { removeToCart } from '@/src/app/Redux/Product/cartSliсe'

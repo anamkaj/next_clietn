@@ -1,5 +1,5 @@
 import { useAppDispatch } from '@/src/app/Redux/storeHook'
-import React from 'react'
+
 import { AddToCartType } from '../model/type/button-type'
 import { addToCart } from '@/src/app/Redux/Product/cartSliсe'
 

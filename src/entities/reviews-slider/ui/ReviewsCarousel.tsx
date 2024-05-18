@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Reviews from './slider'
 import { SliderService } from '../api/get-reviews'
 import { ReviewsType } from '../model/type/reviews-type'

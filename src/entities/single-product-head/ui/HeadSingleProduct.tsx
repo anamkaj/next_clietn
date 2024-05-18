@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { BsChatDots } from 'react-icons/bs'
 import { BsStarFill } from 'react-icons/bs'
 import { IProduct } from '@/src/shared/reused-type/product'

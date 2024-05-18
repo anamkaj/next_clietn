@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import React from 'react'
+
 import slug from 'slug'
 import { useSingleProduct } from '../../lib/hook/get-one-product'
 

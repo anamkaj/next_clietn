@@ -1,5 +1,5 @@
 import { IProduct } from '@/src/shared/reused-type/product'
-import React from 'react'
+
 
 export default function DiscountBadges({ product }: { product: IProduct }) {
   return (

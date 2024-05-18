@@ -36,8 +36,8 @@ export default function SliderRange({
   // ______________________________________________________________________
 
   // получение из адресной страки параметров для подстановки после возврата из карточки
-  const getMinPrice = searchParams.get('price_min') || min
-  const getMaxPrice = searchParams.get('price_max') || max
+  const getMinPrice = searchParams!.get('price_min') || min
+  const getMaxPrice = searchParams!.get('price_max') || max
 
   // Функция изменения значений слайдера
   const changeSlide = (event: number | number[]) => {

@@ -1,6 +1,6 @@
 'use client'
 import { AnimatePresence, motion } from 'framer-motion'
-import React from 'react'
+
 import { BsArrowLeftCircle, BsList } from 'react-icons/bs'
 import { useAtom } from 'jotai'
 import { AiOutlineCloseCircle } from 'react-icons/ai'

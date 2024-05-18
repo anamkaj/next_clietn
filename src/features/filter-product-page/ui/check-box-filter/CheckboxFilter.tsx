@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+
 import './../css/scrollBar.css'
 import { CgMathPlus } from 'react-icons/cg'
 import { CgMathMinus } from 'react-icons/cg'

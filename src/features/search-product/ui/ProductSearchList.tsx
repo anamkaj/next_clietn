@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link'
-import React from 'react'
+
 import Image from 'next/image'
 import slug from 'slug'
 import './css/scrollBar.css'

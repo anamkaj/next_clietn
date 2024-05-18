@@ -1,5 +1,5 @@
-import React from 'react'
-import { SingleProduct } from '@/src/pages/single-product-page'
+import SingleProduct from '@/src/views/single-product-page'
+
 
 export default async function SingleProductCart({
   params,

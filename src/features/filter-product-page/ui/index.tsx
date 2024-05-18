@@ -1,4 +1,4 @@
-import React from 'react'
+
 import dynamic from 'next/dynamic'
 import FilterLoader from './pre-loaded/FilterLoader'
 import { FilterServices } from '../api/get-filter'

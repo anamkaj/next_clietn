@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+
 import { BsFilterRight } from 'react-icons/bs'
 import { AiFillCloseCircle } from 'react-icons/ai'
 import MainComponentFilter from '../MainComponentFilter'

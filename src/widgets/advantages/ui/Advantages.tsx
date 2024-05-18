@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { list } from '../model/data'
 export default function Advantages() {
   return (

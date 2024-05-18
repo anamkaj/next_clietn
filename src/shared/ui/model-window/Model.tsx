@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+
 import { AiFillCloseCircle } from 'react-icons/ai'
 
 type ChildrenProps = {

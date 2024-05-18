@@ -1,5 +1,5 @@
-import React from 'react'
-import { PageCart } from '@/src/pages/order-page'
+
+import PageCart from '@/src/views/order-page'
 
 export default function ShopCardPage() {
   return (

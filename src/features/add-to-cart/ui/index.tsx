@@ -1,6 +1,6 @@
 'use client'
 import { useAppSelector } from '@/src/app/Redux/storeHook'
-import React from 'react'
+
 import AddProductToStor from './AddProductToStor'
 import RemoveProductToStor from './RemoveProductToStor'
 import { IProduct } from '@/src/shared/reused-type/product'

@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+
 import { ButtonMain } from '@/src/shared/ui/button/button-header'
 import { Search } from '@/src/features/search-product'
 import { ShopCardHeader } from '@/src/entities/shop-cart'

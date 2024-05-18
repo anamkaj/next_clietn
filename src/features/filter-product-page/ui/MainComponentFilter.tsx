@@ -19,8 +19,8 @@ export default function MainComponentFilter({
   categoryId,
 }: IFilterProductProp) {
   const searchParams = useSearchParams()
-  const urlBrand = searchParams.get('brand')
-  const urlParam = searchParams.get('paramfilter')
+  const urlBrand = searchParams!.get('brand')
+  const urlParam = searchParams!.get('paramfilter')
   const { some: data, brand, sumProduct } = paramFilterProduct
   const parentId = useRef<number[]>([])
 

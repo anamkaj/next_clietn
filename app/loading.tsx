@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+
 import { LazyLoad } from '@/src/shared/ui/pre-loader'
 
 export default function loading() {

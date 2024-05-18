@@ -1,5 +1,5 @@
-import { Dashboard } from '@/src/pages/dashboard-page'
-import React from 'react'
+
+import Dashboard from '@/src/views/dashboard-page'
 
 export default function page() {
   return (

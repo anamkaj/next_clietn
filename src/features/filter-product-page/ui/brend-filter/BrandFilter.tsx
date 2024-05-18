@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+
 import { PropBrandFilter } from '../../model/type/type'
 
 export default function BrandFilter({

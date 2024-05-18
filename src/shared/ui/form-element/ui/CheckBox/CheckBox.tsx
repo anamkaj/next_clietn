@@ -1,5 +1,5 @@
 import { Person } from '@/src/shared/reused-type/form-type/form-person'
-import React from 'react'
+
 import { FieldErrors, UseFormRegister } from 'react-hook-form'
 
 type CheckBox = {

@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { BsGear } from 'react-icons/bs'
 import Price from './Price'
 import { IProduct } from '@/src/shared/reused-type/product'

@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+
 import ContentLoader from 'react-content-loader'
 import { ClipLoader, FadeLoader } from 'react-spinners'
 import { BeatLoader } from 'react-spinners'

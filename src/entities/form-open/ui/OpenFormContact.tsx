@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+
 import { useForm } from 'react-hook-form'
 import { useOpenForm } from '../lib/hook/send-form'
 import { useGoalYandexMetrika } from '@/src/shared/hook/goal.metrika'

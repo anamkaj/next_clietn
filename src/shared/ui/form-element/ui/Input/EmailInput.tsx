@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { Person } from '@/src/shared/reused-type/form-type/form-person'
 import { FieldErrors, UseFormRegister } from 'react-hook-form'
 import ErrorInput from './ErrorInput'

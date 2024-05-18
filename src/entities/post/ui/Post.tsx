@@ -1,4 +1,4 @@
-import React from 'react'
+
 import ReactMarkdown from 'react-markdown'
 import { PostType } from '../model/types/type.post'
 

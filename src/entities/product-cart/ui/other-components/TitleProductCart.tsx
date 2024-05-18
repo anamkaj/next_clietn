@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Link from 'next/link'
 import slug from 'slug'
 import { IProduct } from '@/src/shared/reused-type/product'

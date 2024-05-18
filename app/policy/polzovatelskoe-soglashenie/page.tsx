@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { PostServices, UserAgreement, PolicyType } from '@/src/entities/policy'
 
 export default async function Politics() {

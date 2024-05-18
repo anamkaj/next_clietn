@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { ICategory } from '@/src/shared/reused-type/category'
 import { Metadata } from 'next'
 import { getAllCategory } from '@/src/shared/api/api-category/get-category'

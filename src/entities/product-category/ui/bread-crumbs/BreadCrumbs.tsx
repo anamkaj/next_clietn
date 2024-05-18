@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { PriceProp, PropBreadCrumbs } from '../../model/type.category'
 import { getAllProductNotFilter } from '../../api/get-category'
 

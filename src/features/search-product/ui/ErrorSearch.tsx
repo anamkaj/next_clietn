@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { FcFinePrint } from 'react-icons/fc'
 
 export default function ErrorSearch({ text }: { text: string }) {

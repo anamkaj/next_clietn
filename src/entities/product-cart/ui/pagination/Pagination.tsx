@@ -1,8 +1,7 @@
 'use client'
-import React from 'react'
+
 import { useRouter, useSearchParams } from 'next/navigation'
 import { IProduct } from '@/src/shared/reused-type/product'
-
 
 export default function Pagination({
   page,
@@ -13,7 +12,7 @@ export default function Pagination({
 }) {
   const searchParams = useSearchParams()
   const router = useRouter()
-  const url = searchParams.toString()
+  const url = searchParams!.toString()
 
   const changeUrl = url.split('&')
   const regex = /page/g
