@@ -15,7 +15,7 @@ export default function Body({ chat }: { chat: MessagesArrayType[] }) {
   }, [chat])
 
   return (
-    <div className='w-full bg-white mt-10 p-4 overflow-y-scroll mb-[110px]'>
+    <div className='w-full bg-white p-4 overflow-y-scroll mb-[60px]'>
       <div className='flex  flex-col item-center'>
         {chat.map((data, index) => {
           return (

@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export default function Footer() {
   return (
-    <div className=' container mx-auto relative mt-80'>
+    <div className=' container mx-auto relative mt-[820px]'>
       <div className=' absolute bottom-0 bg-slate-100 rounded-t-xl p-4'>
         <div className=' grid grid-cols-1 lg:grid-cols-3 justify-center '>
           <div className=' flex flex-col items-center'>

@@ -85,10 +85,10 @@ export default function SocketContextProvider({
       })
 
       socket.on('connect', () => {
-        console.log('socket connected')
+        console.log('')
       })
       socket.on('disconnect', () => {
-        console.log('socket disconnected')
+        console.log('')
       })
     }
   }, [user])

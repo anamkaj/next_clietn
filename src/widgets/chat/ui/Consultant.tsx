@@ -6,10 +6,12 @@ import AuthChat from './auth/AuthChat'
 import { WebSocketProvider } from '@/src/app/provider/socket/SocketProvider'
 import { Online, StatusChat } from '@/src/shared/ui/chat-ui/ConsultantUi'
 import { AnimatePresence, motion } from 'framer-motion'
+import { useWindowSize } from '@/src/shared/hook/useWindowSize'
 
 export default function Consultant() {
   const { socket, chat, setChat, user } = useContext(WebSocketProvider)
   const [active, setActive] = useState<boolean>(false)
+  const { width } = useWindowSize()
 
   if (!active) {
     return (
@@ -53,11 +55,15 @@ export default function Consultant() {
             animate={{ opacity: 1, x: '0%' }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ duration: 0.3 }}
-            className='fixed right-5 bottom-10 bg-white z-50 flex flex-col item-center shadow-xl w-[382px] h-[550px]'
+            className={
+              width < 425
+                ? 'fixed h-full bottom-0 w-full bg-white z-50 flex flex-col item-center'
+                : 'fixed right-5 bottom-10 bg-white z-50 flex flex-col item-center shadow-xl w-[380px] h-[550px]'
+            }
           >
             <button
               onClick={() => setActive(false)}
-              className='absolute left-[-25px] top-[-25px] p-2 bg-slate-100 rounded-full shadow-2xl'
+              className='absolute right-[5px] top-[5px] bg-slate-100 rounded-full'
             >
               <span>
                 <svg

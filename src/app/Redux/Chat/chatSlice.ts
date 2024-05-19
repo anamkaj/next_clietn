@@ -27,7 +27,6 @@ export const userData = createSlice({
     builder.addCase(
       getNewUserData.fulfilled,
       (state, action: PayloadAction<NewUser>) => {
-        console.log(action.payload)
         return {
           ...state,
           chat: action.payload.chat,
