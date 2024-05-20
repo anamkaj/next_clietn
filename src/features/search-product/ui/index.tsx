@@ -2,75 +2,67 @@
 import React, { useState } from 'react'
 import { MdClear } from 'react-icons/md'
 import { BsSearch } from 'react-icons/bs'
-import ScrollList from './ProductList'
 import SearchMobile from './Mobile'
-import ErrorSearch from './ErrorSearch'
 import { useWindowSize } from '@/src/shared/hook/useWindowSize'
 import { useSearch } from '../lib/hook/get-search-product'
+import { useValidate } from '../lib/hook/validate-input'
+import ProductList from './ProductList'
 
 export default function Search() {
-  const [input, setInput] = useState<string>('')
-  const [active, setActive] = useState<boolean>(false)
-  const { errorData, category, product } = useSearch(input)
   const { width } = useWindowSize()
-  // const isMobileScreen = useMediaQuery({ query: '(max-width: 480px)' })
+  const [active, setActive] = useState<boolean>(false)
+  const { input, setInput, handleSearch } = useValidate()
+  const { category, product } = useSearch(input)
+
+  if (width <= 768) {
+    return (
+      <>
+        <SearchMobile
+          handleSearch={handleSearch}
+          product={product}
+          category={category}
+          input={input}
+        />
+      </>
+    )
+  }
 
   return (
     <>
-      {width >= 768 ? (
-        <div className='relative w-[31vw]'>
-          <div className=' flex items-center '>
-            <input
-              value={input}
-              onClick={() => setActive(true)}
-              onChange={(e) => setInput(e.target.value)}
-              className=' bg-white rounded-lg border-2 border-slate-300 hover:border-slate-300 py-2 px-2 leading-tight focus:outline-none font-thin w-full text-lg z-20 '
-              type='text'
-              placeholder={!active ? 'Поиск по товарам' : 'Введите запрос'}
-            />
-            <div className='relative '>
-              <div className='z-20 absolute right-8 top-[-10px] '>
-                {active ? (
-                  <MdClear
-                    onClick={() => setInput('')}
-                    className=' cursor-pointer h-5 w-5 '
-                  />
-                ) : (
-                  <BsSearch
-                    type='submit'
-                    className=' cursor-pointer h-5 w-5 '
-                  />
-                )}
-              </div>
+      <div className='relative w-[31vw]'>
+        <div className=' flex items-center '>
+          <input
+            value={input}
+            onClick={() => setActive(true)}
+            onChange={(e) => handleSearch(e.target.value)}
+            className=' bg-white rounded-lg border-2 border-slate-300 hover:border-slate-300 py-2 px-2 leading-tight focus:outline-none font-thin w-full text-lg z-20 '
+            type='text'
+            placeholder={!active ? 'Поиск по товарам' : 'Введите запрос'}
+          />
+          <div className='relative '>
+            <div className='z-20 absolute right-8 top-[-10px] '>
+              {active ? (
+                <MdClear
+                  onClick={() => setInput('')}
+                  className=' cursor-pointer h-5 w-5 '
+                />
+              ) : (
+                <BsSearch type='submit' className=' cursor-pointer h-5 w-5 ' />
+              )}
             </div>
           </div>
-          {active &&
-            (errorData !== undefined ? (
-              <ErrorSearch
-                text={'Ошибка поиска. Мы уже решаем эту проблему.'}
-              />
-            ) : (
-              <div>
-                <ScrollList
-                  product={product}
-                  category={category}
-                  active={active}
-                  setActive={setActive}
-                  input={input}
-                />
-              </div>
-            ))}
         </div>
-      ) : (
-        <div>
-          <SearchMobile
-            setInput={setInput}
-            data={product}
-            category={category}
-            input={input}
-          />
-        </div>
-      )}
+        {active && (
+          <div>
+            <ProductList
+              product={product}
+              category={category}
+              
+              setActive={setActive}
+            />
+          </div>
+        )}
+      </div>
 
       {/* Темный фон для поиска */}
       {active && (

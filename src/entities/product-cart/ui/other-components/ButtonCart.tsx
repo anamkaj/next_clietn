@@ -15,7 +15,7 @@ export function ButtonCart({ product }: BtnProps) {
   const dispatch = useAppDispatch()
   const checkCartColorButton =
     checkCartProduct.length > 0
-      ? checkCartProduct.find((e) => e.id === product.id)
+      ? checkCartProduct.find((e: any) => e.id === product.id)
       : undefined
   return (
     <div>

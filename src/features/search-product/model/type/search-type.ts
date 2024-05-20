@@ -1,6 +1,6 @@
 export interface SearchMobileProp {
-  setInput: React.Dispatch<React.SetStateAction<string>>
-  data: ProductType[] | undefined
+  handleSearch: (e: string) => void
+  product: ProductType[] | undefined
   category: CategoryType[]
   input: string
 }
@@ -38,16 +38,13 @@ export interface InputMobileProp extends SearchMobileProp {
 export interface ProductListMobileProp {
   product: ProductType[] | undefined
   category: CategoryType[]
-  input: string
   setActive: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 export type ProductListProp = {
   product: ProductType[] | undefined
   category: CategoryType[]
-  active: boolean
   setActive: React.Dispatch<React.SetStateAction<boolean>>
-  input: string
 }
 
 export type PropProductSearchList = {

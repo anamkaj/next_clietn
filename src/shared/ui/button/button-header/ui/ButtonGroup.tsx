@@ -1,6 +1,5 @@
 'use client'
 import { useWindowSize } from '@/src/shared/hook/useWindowSize'
-
 import { ButtonGroupProp } from '../model/button.type'
 
 export const ButtonMain = ({

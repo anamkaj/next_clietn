@@ -5,10 +5,9 @@ import InputMobile from './SearchMobile'
 import { ButtonMain } from '@/src/shared/ui/button/button-header'
 import { SearchMobileProp } from '../../model/type/search-type'
 
-
 export default function SearchMobile({
-  setInput,
-  data,
+  handleSearch,
+  product,
   category,
   input,
 }: SearchMobileProp) {
@@ -31,10 +30,10 @@ export default function SearchMobile({
       {active && (
         <InputMobile
           setActive={setActive}
-          data={data}
+          product={product}
           active={active}
           input={input}
-          setInput={setInput}
+          handleSearch={handleSearch}
           category={category}
         />
       )}

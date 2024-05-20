@@ -1,9 +1,7 @@
 'use client'
 import Link from 'next/link'
-
 import Image from 'next/image'
 import { CategoryListProp } from '../model/type/search-type'
-
 
 export default function CategoryList({
   category,
