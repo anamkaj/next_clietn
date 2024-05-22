@@ -14,7 +14,7 @@ export default async function AdvantagesCctv() {
         </h2>
         <hr className=' w-64 mt-4 bg-slate-200' />
       </div>
-      <div className='mt-20 grid grid-cols-2 items-center'>
+      <div className='mt-20 grid grid-cols-2 items-center gap-1'>
         <div>
           <>
             <Image

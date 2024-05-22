@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { MdAlternateEmail } from 'react-icons/md'
 import { FaWhatsappSquare } from 'react-icons/fa'
 import Link from 'next/link'
@@ -8,11 +8,16 @@ import { useWindowSize } from '@/src/shared/hook/useWindowSize'
 
 export default function Contact() {
   const [active, setActive] = useState<boolean>(false)
-  const { width } = useWindowSize()
+  const { width, heightDynamic } = useWindowSize()
 
   const openContact = () => setActive((state) => !state)
-
   const widthWindows = width < 768
+
+  useEffect(() => {
+    if (heightDynamic > 3) {
+      setActive(false)
+    }
+  }, [heightDynamic])
 
   return (
     <>
@@ -38,12 +43,12 @@ export default function Contact() {
           textStyle='uppercase text-black'
         />
         {active && (
-          <div className='relative '>
+          <div className='relative z-10'>
             <div
               className={
                 widthWindows
                   ? 'absolute left-[-130px] bg-slate-100 rounded-lg p-2 mt-2 shadow-lg space-y-4'
-                  : ' absolute  bg-slate-100 rounded-lg p-2 mt-2 shadow-lg space-y-4'
+                  : 'absolute  bg-slate-100 rounded-lg p-2 mt-2 shadow-lg space-y-4'
               }
             >
               <div className='flex whitespace-nowrap flex-col '>
@@ -52,13 +57,32 @@ export default function Contact() {
                   <h4 className='text-lg'>info@tmk-v.ru</h4>
                 </div>
 
-                <div className=' flex gap-2 items-center'>
+                <div className='flex gap-2 items-center'>
                   <FaWhatsappSquare className=' text-green-500 w-5 h-5' />
                   <Link
                     href='https://wa.me/79002689360'
                     className=' font-medium underline text-sm'
                   >
                     Напишите нам
+                  </Link>
+                </div>
+                <div className=' flex gap-2 items-center'>
+                  <span>
+                    <svg
+                      xmlns='http://www.w3.org/2000/svg'
+                      width='24'
+                      height='24'
+                      viewBox='0 0 24 24'
+                      className=' text-blue-600'
+                    >
+                      <path
+                        fill='currentColor'
+                        d='M21.579 6.855c.14-.465 0-.806-.662-.806h-2.193c-.558 0-.813.295-.953.619c0 0-1.115 2.719-2.695 4.482c-.51.513-.743.675-1.021.675c-.139 0-.341-.162-.341-.627V6.855c0-.558-.161-.806-.626-.806H9.642c-.348 0-.558.258-.558.504c0 .528.79.65.871 2.138v3.228c0 .707-.127.836-.407.836c-.743 0-2.551-2.729-3.624-5.853c-.209-.607-.42-.852-.98-.852H2.752c-.627 0-.752.295-.752.619c0 .582.743 3.462 3.461 7.271c1.812 2.601 4.363 4.011 6.687 4.011c1.393 0 1.565-.313 1.565-.853v-1.966c0-.626.133-.752.574-.752c.324 0 .882.164 2.183 1.417c1.486 1.486 1.732 2.153 2.567 2.153h2.192c.626 0 .939-.313.759-.931c-.197-.615-.907-1.51-1.849-2.569c-.512-.604-1.277-1.254-1.51-1.579c-.325-.419-.231-.604 0-.976c.001.001 2.672-3.761 2.95-5.04'
+                      />
+                    </svg>
+                  </span>
+                  <Link href={'https://vk.com/tmkvektor'} className='text-lg'>
+                    tmkvektor
                   </Link>
                 </div>
               </div>

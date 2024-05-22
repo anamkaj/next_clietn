@@ -30,7 +30,7 @@ export default function OpenFormContact({ style }: OpenFormContactType) {
         <>
           <button
             onClick={() => sendGoal('Event_25')}
-            className='w-full text-white bg-indigo-500 font-medium rounded-lg  px-10 py-2.5 text-center mr-2 mb-2 text-sm  cursor-pointer uppercase border-2 border-indigo-600'
+            className='w-full text-white bg-indigo-500 font-medium rounded-lg  px-10 py-2.5 text-center mr-2 mb-2 text-sm  cursor-pointer uppercase border-2'
           >
             Отправить
           </button>

@@ -9,7 +9,6 @@ import { useAtom } from 'jotai'
 import { Logo } from '@/src/shared/ui/logo'
 import { Contact } from '@/src/shared/ui/contact-info'
 import { requestConsultationBtn } from '@/src/shared/store/jotai/modal'
-
 import { signOut, useSession } from 'next-auth/react'
 
 export default function DesktopHeader() {
