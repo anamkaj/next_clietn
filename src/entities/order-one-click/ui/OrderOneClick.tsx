@@ -2,7 +2,6 @@
 import { fastOrderButton } from '@/src/shared/store/jotai/modal'
 import { useAtom } from 'jotai'
 
-
 export default function OrderOneClick() {
   const [_, setFastOrderModel] = useAtom(fastOrderButton)
   return (

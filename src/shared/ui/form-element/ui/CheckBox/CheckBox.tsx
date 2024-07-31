@@ -1,10 +1,8 @@
-import { Person } from '@/src/shared/reused-type/form-type/form-person'
-
 import { FieldErrors, UseFormRegister } from 'react-hook-form'
 
 type CheckBox = {
-  register: UseFormRegister<Person>
-  errors: FieldErrors<Person>
+  register: UseFormRegister<any>
+  errors: FieldErrors<any>
 }
 
 export const CheckBox = ({ register, errors }: CheckBox) => {

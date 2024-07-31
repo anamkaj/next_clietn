@@ -1,5 +1,4 @@
 'use client'
-
 import { ButtonMain } from '@/src/shared/ui/button/button-header'
 import { Search } from '@/src/features/search-product'
 import { ShopCardHeader } from '@/src/entities/shop-cart'
@@ -25,9 +24,10 @@ export default function DesktopHeader() {
 
   const { width } = useWindowSize()
   const widthWindows = width > 768
+
   return (
     <div className='p-2 bg-white ' hidden={!widthWindows}>
-      <div className=' flex gap-2 justify-between items-center flex-wrap '>
+      <div className=' flex gap-2 justify-between items-center '>
         <Logo white={80} />
 
         <ButtonMain
@@ -66,7 +66,7 @@ export default function DesktopHeader() {
             </svg>
           }
           action={consulBtn}
-          style='rounded px-2 md:px-6 py-2 border bg-slate-100 flex gap-2 items-center'
+          style='rounded px-2 md:px-4 py-2 border bg-slate-100 flex gap-2 items-center'
           styleIcon='text-slate-700'
           textStyle='uppercase text-black'
         />

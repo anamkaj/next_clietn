@@ -1,12 +1,12 @@
 import Link from 'next/link'
-
 import { AiOutlineShoppingCart } from 'react-icons/ai'
 import { useVisibleCartProduct } from '../lib/hook/visible-cart'
-import { PropVisibleCartProduct } from '../model/cart-type'
 
 export default function VisibleCartProduct({
   countProductCart,
-}: PropVisibleCartProduct) {
+}: {
+  countProductCart: number
+}) {
   const { hiddenCart, position } = useVisibleCartProduct(countProductCart)
   return (
     <div>

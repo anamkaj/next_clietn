@@ -1,8 +1,7 @@
-
 import { useCountProductStore } from '../lib/hook/dispatch.inc.dec'
 import { IProduct } from '@/src/shared/reused-type/product'
 
-export type PropCount = {
+type PropCount = {
   setCountPopupProduct: React.Dispatch<React.SetStateAction<number>>
   countPopupProduct: number
   product: IProduct

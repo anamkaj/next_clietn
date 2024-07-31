@@ -9,12 +9,8 @@ type PropPopup = {
   setFastOrderModel: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-export const FastOrderCart = ({
-  product,
-
-  setFastOrderModel,
-}: PropPopup) => {
-  const [countFastOrderProduct, setCountFastOrderProduct] = useState(1)
+export const FastOrderCart = ({ product, setFastOrderModel }: PropPopup) => {
+  const [countProduct, setCountProduct] = useState(1)
   return (
     <>
       <div className=' flex flex-col items-center '>
@@ -35,15 +31,15 @@ export const FastOrderCart = ({
           <div className=' mt-2'>
             <p className=' text-sm'>
               {Math.round(
-                product.price * (product.discount / 11),
+                product.price * (product.discount / 11) * countProduct,
               ).toLocaleString('ru')}{' '}
               ₽
             </p>
           </div>
           <div className=' flex justify-center'>
             <CounterProduct
-              setCountPopupProduct={setCountFastOrderProduct}
-              countPopupProduct={countFastOrderProduct}
+              setCountPopupProduct={setCountProduct}
+              countPopupProduct={countProduct}
               product={product}
             />
           </div>

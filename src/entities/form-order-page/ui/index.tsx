@@ -13,19 +13,24 @@ export const FormOrder = () => {
     register,
     handleSubmit,
     reset,
-    formState: { errors, isValid },
+    formState: { errors },
   } = useForm<Person>()
   const { onSubmitOrderCart, response } = useFormCartPage()
 
   // Отправка достижения цели в Яндекс метрику
-  const { sendGoal } = useGoalYandexMetrika({ isValid, reset })
+  const { sendGoal } = useGoalYandexMetrika()
+
   useEffect(() => {
+    const timer = setTimeout(() => reset(), 2000)
+
     if (response?.status == 200) {
-      setTimeout(() => {
-        reset()
-      }, 1000)
+      timer
+    }
+    return () => {
+      clearTimeout(timer)
     }
   }, [response])
+
   return (
     <div className=' flex flex-col bg-white shadow-md p-4 md:mt-0'>
       <div>

@@ -2,10 +2,10 @@ import React, { useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 import { useFormRequest } from '../lib/hook/send-form'
 import { AgreementForm } from '@/src/shared/ui/privacy-policy'
-import { Person } from '@/src/shared/reused-type/form-type/form-person'
 import { useGoalYandexMetrika } from '@/src/shared/hook/goal.metrika'
 import { IProduct } from '@/src/shared/reused-type/product'
 import { EmailInput, NameInput, PhoneInput } from '@/src/shared/ui/form-element'
+import { SendOneProductForm } from '../model/type/form-type'
 
 type PropForm = {
   status?: boolean
@@ -26,21 +26,24 @@ export const FormPerson = ({
     register,
     handleSubmit,
     reset,
-    formState: { errors, isValid },
-  } = useForm<Person>()
+    formState: { errors },
+  } = useForm<SendOneProductForm>()
 
   //Отправка форм обратной связи на сервер
   const { onSubmitFastOrder, response } = useFormRequest({ product, price })
 
   // Отправка достижения цели в Яндекс метрику
-  const { sendGoal } = useGoalYandexMetrika({ isValid, reset })
+  const { sendGoal } = useGoalYandexMetrika()
 
   useEffect(() => {
+    const timer = setTimeout(() => reset(), 2000)
+
     if (response?.status == 200) {
-      setTimeout(() => {
-        reset()
-        return setFastOrderModel(false)
-      }, 2000)
+      timer
+      setFastOrderModel(false)
+    }
+    return () => {
+      clearTimeout(timer)
     }
   }, [response])
 

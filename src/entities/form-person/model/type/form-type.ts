@@ -1,8 +1,9 @@
-import { FormReq } from '@/src/shared/reused-type/form-type/form-short'
-
-export interface IFormOneProductPost extends FormReq {
+export type SendOneProductForm = {
   article: number
   title: string
-  price: number
+  price: number | undefined
+  phone: number
+  name: string
+  email: string
   id: number
 }

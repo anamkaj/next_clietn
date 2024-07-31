@@ -4,7 +4,7 @@ import { usePathname } from 'next/navigation'
 export const useVisibleCartProduct = (countProductCart: number) => {
   const path = usePathname()
 
-  const { size, heightDynamic } = useWindowSize()
+  const { heightDynamic } = useWindowSize()
 
   const hiddenCart = path == '/order' || countProductCart == 0
   const position = heightDynamic > 200

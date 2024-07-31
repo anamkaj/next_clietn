@@ -1,4 +1,3 @@
-
 import { BsStarFill, BsStar } from 'react-icons/bs'
 
 type RatingProp = {

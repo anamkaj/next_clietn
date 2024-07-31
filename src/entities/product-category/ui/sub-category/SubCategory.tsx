@@ -1,4 +1,3 @@
-
 import Link from 'next/link'
 import Image from 'next/image'
 import { PropsSubCategory } from '../../model/type.category'
@@ -12,7 +11,7 @@ export default async function SubCategory({
   )
   return (
     <div className=' mt-5 grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-1 '>
-      {subCategory?.map((x) => {
+      {subCategory.map((x) => {
         return (
           <div
             key={x.id}
@@ -32,7 +31,7 @@ export default async function SubCategory({
                   height={80}
                 />
                 <span className='font-light text-neutral-800 text-center'>
-                  {x?.name}
+                  {x.name}
                 </span>
               </div>
             </Link>

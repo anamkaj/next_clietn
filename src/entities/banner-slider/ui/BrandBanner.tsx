@@ -1,34 +1,21 @@
 'use client'
-import React, { useEffect, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/autoplay'
-import { useWindowSize } from '@/src/shared/hook/useWindowSize'
 import { BannerSlider } from './BannerImages'
+import { imgPopularBrand } from '../model/data/images-name'
+import { useSlider } from '@/src/shared/hook/useSlider'
+
+const countSlide = {
+  w768: 2,
+  w1024: 3,
+  wm1024: 4,
+}
 
 export default function BrandBanner() {
-  const [slide, setSlide] = useState<number>(3)
-  const { width } = useWindowSize()
+  const { slide } = useSlider(3, countSlide)
 
-  const imgPopularBrand = [
-    '7381.600.jpg',
-    'Dahuog.png',
-    'polivision.png',
-    'trasit.jpg',
-    'slinex.png',
-    'Seagate.png',
-  ]
-
-  useEffect(() => {
-    if (width <= 768) {
-      setSlide(2)
-    } else if (width <= 1024) {
-      setSlide(3)
-    } else if (width >= 1024) {
-      setSlide(4)
-    }
-  }, [width])
   return (
     <div>
       <Swiper

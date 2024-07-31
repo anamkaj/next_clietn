@@ -1,4 +1,3 @@
-
 import useSWR from 'swr'
 import { MenuServices } from '../../api/get-category-menu'
 import { ICategory } from '@/src/shared/reused-type/category'

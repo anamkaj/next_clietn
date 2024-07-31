@@ -1,6 +1,5 @@
 import { useAppDispatch, useAppSelector } from '@/src/app/Redux/storeHook'
 import Link from 'next/link'
-
 import { AiOutlineShoppingCart } from 'react-icons/ai'
 
 type MobileShopCartProp = {

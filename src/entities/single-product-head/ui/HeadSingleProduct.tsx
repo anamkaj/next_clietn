@@ -1,13 +1,8 @@
-
 import { BsChatDots } from 'react-icons/bs'
 import { BsStarFill } from 'react-icons/bs'
 import { IProduct } from '@/src/shared/reused-type/product'
 
-export default function HeadSingleProduct({
-  product,
-}: {
-  product: IProduct
-}) {
+export default function HeadSingleProduct({ product }: { product: IProduct }) {
   return (
     <div>
       <div className={'flex gap-x-6 items-center mt-5'}>

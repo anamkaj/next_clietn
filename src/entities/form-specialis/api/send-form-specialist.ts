@@ -1,7 +1,7 @@
-import { FormReq } from '@/src/shared/reused-type/form-type/form-short'
 import axios from 'axios'
+import { FormType } from '../model/type'
 
-export const postFormFeedback = async (params: FormReq) => {
+export const postFormFeedback = async (params: FormType) => {
   try {
     const { data, status } = await axios.post(
       `https://tmk-v.ru:8080/api/form/order`,

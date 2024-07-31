@@ -1,4 +1,3 @@
-
 import ReactMarkdown from 'react-markdown'
 import { PolicyType } from '../model/types/type.policy'
 

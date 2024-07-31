@@ -1,18 +1,17 @@
-
 import { Person } from '@/src/shared/reused-type/form-type/form-person'
 import { FieldErrors, UseFormRegister } from 'react-hook-form'
 import ErrorInput from './ErrorInput'
 
 type InputName = {
-  register: UseFormRegister<Person>
-  errors: FieldErrors<Person>
+  register: UseFormRegister<any>
+  errors: FieldErrors<any>
   required?: boolean
 }
 
 export const EmailInput = ({ register, errors, required }: InputName) => {
   const objError = {
     name: 'email',
-    type: errors.email?.type.toString(),
+    type: errors.email?.type?.toString(),
   }
 
   return (

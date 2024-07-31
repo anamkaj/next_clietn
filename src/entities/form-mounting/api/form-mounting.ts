@@ -1,5 +1,3 @@
-
-
 import { FormReq } from '@/src/shared/reused-type/form-type/form-short'
 import axios from 'axios'
 
@@ -11,7 +9,7 @@ export const postFormFeedback = async (params: FormReq) => {
         data: params,
       },
     )
-    console.log(status)
+
     return { data, status, state: 'Форма успешно отправленна' }
   } catch (error) {
     return { state: 'Ошибка отправки формы ' }

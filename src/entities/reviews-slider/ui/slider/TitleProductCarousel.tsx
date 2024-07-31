@@ -1,5 +1,4 @@
 import Link from 'next/link'
-
 import slug from 'slug'
 import { useSingleProduct } from '../../lib/hook/get-one-product'
 

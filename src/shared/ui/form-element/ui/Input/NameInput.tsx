@@ -1,12 +1,11 @@
 'use client'
 import { Person } from '@/src/shared/reused-type/form-type/form-person'
-
 import { FieldErrors, UseFormRegister } from 'react-hook-form'
 import ErrorInput from './ErrorInput'
 
 type InputName = {
-  register: UseFormRegister<Person>
-  errors: FieldErrors<Person>
+  register: UseFormRegister<any>
+  errors: FieldErrors<any>
 }
 
 export const nameReg = /^[А-ЯЁ\s]+$/i
@@ -14,7 +13,7 @@ export const nameReg = /^[А-ЯЁ\s]+$/i
 export const NameInput = ({ register, errors }: InputName) => {
   const objError = {
     name: 'name',
-    type: errors.name?.type.toString(),
+    type: errors.name?.type?.toString(),
   }
 
   return (

@@ -2,7 +2,6 @@
 import React, { useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 import { AgreementForm } from '@/src/shared/ui/privacy-policy'
-import { Person } from '@/src/shared/reused-type/form-type/form-person'
 import { useAtom } from 'jotai'
 import { useGoalYandexMetrika } from '@/src/shared/hook/goal.metrika'
 import { requestInstallationBtn } from '@/src/shared/store/jotai/modal'
@@ -13,6 +12,7 @@ import {
   PhoneInput,
 } from '@/src/shared/ui/form-element'
 import { useFormCallSpecialist } from '../lib/hook/form-specialist'
+import { FormType } from '../model/type'
 
 // Форма запроса выезда специалиста , кнопка в хедере "Монтаж и Установка"
 
@@ -21,14 +21,14 @@ export const FormInstallSpecialist = () => {
     register,
     handleSubmit,
     reset,
-    formState: { errors, isValid },
-  } = useForm<Person>()
+    formState: { errors },
+  } = useForm<FormType>()
 
   const [_, setInstallation] = useAtom(requestInstallationBtn)
 
   const { onSubmitFormContact, response } = useFormCallSpecialist()
   // Отправка достижения цели в Яндекс метрику
-  const { sendGoal } = useGoalYandexMetrika({ isValid, reset })
+  const { sendGoal } = useGoalYandexMetrika()
 
   useEffect(() => {
     if (response?.status == 200) {

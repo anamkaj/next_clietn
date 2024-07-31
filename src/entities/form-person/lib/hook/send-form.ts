@@ -1,35 +1,35 @@
 // Отправка заявки из "Быстрый Заказ"
 
 import { SubmitHandler } from 'react-hook-form'
-import { Person } from '@/src/shared/reused-type/form-type/form-person'
 import { useState } from 'react'
 import { IProduct } from '@/src/shared/reused-type/product'
 import { postSingleProduct } from '../../api/post-one-product'
-import { IFormOneProductPost } from '../../model/type/form-type'
+import { SendOneProductForm } from '../../model/type/form-type'
 
 type PropFormHook = {
   product?: IProduct
   price?: number
 }
 
-export const useFormRequest = ({ product, price }: PropFormHook) => {
-  const [response, setResponse] = useState<
-    | {
-        data: any
-        status: number
-        state: string
-      }
-    | { state: string; data?: undefined; status?: undefined }
-  >()
+type Response1 = {
+  data: any
+  status: number
+  state: string
+}
+type Response2 = { state: string; data?: undefined; status?: undefined }
 
-  const sendOneProduct = (oneProduct: IFormOneProductPost) => {
-    const status = postSingleProduct(oneProduct).then((data) =>
-      setResponse(data),
-    )
+export const useFormRequest = ({ product, price }: PropFormHook) => {
+  const [response, setResponse] = useState<Response1 | Response2>()
+
+  const sendOneProduct = async (oneProduct: SendOneProductForm) => {
+    const resp = await postSingleProduct(oneProduct)
+    setResponse(resp)
   }
 
   //Отправка быстрой покупки одного товара
-  const onSubmitFastOrder: SubmitHandler<Person> = (data: Person) => {
+  const onSubmitFastOrder: SubmitHandler<SendOneProductForm> = (
+    data: SendOneProductForm,
+  ) => {
     if (product) {
       const oneProduct = {
         article: product.article,

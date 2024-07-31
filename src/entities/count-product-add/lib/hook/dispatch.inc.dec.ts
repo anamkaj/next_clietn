@@ -1,12 +1,9 @@
-
 import {
-  incrementCounter,
   decrementCounter,
-} from '../../../../app/Redux/Product/cartSliсe'
-import { useAppDispatch } from '../../../../app/Redux/storeHook'
+  incrementCounter,
+} from '@/src/app/Redux/Product/cartSliсe'
+import { useAppDispatch } from '@/src/app/Redux/storeHook'
 import { IProduct } from '@/src/shared/reused-type/product'
-
-
 
 type PropCount = {
   setCountPopupProduct: React.Dispatch<React.SetStateAction<number>>

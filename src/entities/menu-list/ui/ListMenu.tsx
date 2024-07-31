@@ -1,6 +1,5 @@
 'use client'
 import Link from 'next/link'
-
 import { useGetCategoryMobile } from '../lib/hook/get.category.mobile'
 import { BsCaretRight } from 'react-icons/bs'
 import { useAtom } from 'jotai'
@@ -10,7 +9,7 @@ import { mobileLeftBar } from '../model/store/store'
 
 export default function ListMenu() {
   const { category, isLoading } = useGetCategoryMobile()
-  const [active, setActive] = useAtom(mobileLeftBar)
+  const [_, setActive] = useAtom(mobileLeftBar)
   return (
     <div className=' absolute z-30 w-full'>
       <div className=' bg-slate-50 opacity-100  p-2 lg:p-4 rounded-b-xl lg:hover:shadow-2xl'>

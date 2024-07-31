@@ -1,13 +1,11 @@
 'use client'
-
 import { Person } from '@/src/shared/reused-type/form-type/form-person'
 import { FieldErrors, UseFormRegister } from 'react-hook-form'
 import ErrorInput from './ErrorInput'
 
-
 type InputName = {
-  register: UseFormRegister<Person>
-  errors: FieldErrors<Person>
+  register: UseFormRegister<any>
+  errors: FieldErrors<any>
 }
 
 const mobilePhoneRegexp = /^\+?[78][-\(]?\d{3}\)?-?\d{3}-?\d{2}-?\d{2}$/
@@ -15,7 +13,7 @@ const mobilePhoneRegexp = /^\+?[78][-\(]?\d{3}\)?-?\d{3}-?\d{2}-?\d{2}$/
 export const PhoneInput = ({ register, errors }: InputName) => {
   const objError = {
     name: 'phone',
-    type: errors.phone?.type.toString(),
+    type: errors.phone?.type?.toString(),
   }
 
   return (

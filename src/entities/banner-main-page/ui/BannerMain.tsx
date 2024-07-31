@@ -1,11 +1,9 @@
-
 import Image from 'next/image'
 import { imgBanner } from '../api/get.image'
 
 export default function BannerMain() {
   return (
     <>
-      {/* <div className=' hidden xl:w-[310px] xl:block'></div> */}
       <div className=' rounded-lg '>
         <Image
           height={768}

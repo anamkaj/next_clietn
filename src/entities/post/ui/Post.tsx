@@ -1,11 +1,10 @@
-
 import ReactMarkdown from 'react-markdown'
 import { PostType } from '../model/types/type.post'
 
 export default function PostComponent({ data }: { data: PostType[] }) {
   return (
     <div className=' mx-auto container mt-4'>
-      {data?.map((x) => (
+      {data.map((x) => (
         <div key={x.id} className=' mt-8 flex flex-col items-center'>
           <div className=' mt-4 mb-4 w-[30%] '>
             <img

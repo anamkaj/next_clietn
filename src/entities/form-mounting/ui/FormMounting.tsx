@@ -2,12 +2,12 @@
 import React, { useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 import { AgreementForm } from '@/src/shared/ui/privacy-policy'
-import { Person } from '@/src/shared/reused-type/form-type/form-person'
 import { useAtom } from 'jotai'
 import { requestConsultationBtn } from '@/src/shared/store/jotai/modal'
 import { useGoalYandexMetrika } from '@/src/shared/hook/goal.metrika'
 import { EmailInput, NameInput, PhoneInput } from '@/src/shared/ui/form-element'
 import { useFormMounting } from '../lib/hook/form-mounting'
+import { FormCall } from '../model/type'
 
 // Форма запроса выезда специалиста , кнопка в хедере "Заказать обратный звонок"
 
@@ -16,18 +16,22 @@ export const FormMounting = () => {
     register,
     handleSubmit,
     reset,
-    formState: { errors, isValid },
-  } = useForm<Person>()
+    formState: { errors },
+  } = useForm<FormCall>()
   const [_, setRequestConsultation] = useAtom(requestConsultationBtn)
 
-  const { onSubmitFormContact, response } = useFormMounting()
-  const { sendGoal } = useGoalYandexMetrika({ isValid, reset })
+  const { response, onSubmitFormContact } = useFormMounting()
+  const { sendGoal } = useGoalYandexMetrika()
 
   useEffect(() => {
+    const timer = setTimeout(() => reset(), 2000)
+
     if (response?.status == 200) {
-      setTimeout(() => {
-        return setRequestConsultation(false)
-      }, 2000)
+      timer
+      setRequestConsultation(false)
+    }
+    return () => {
+      clearTimeout(timer)
     }
   }, [response])
 

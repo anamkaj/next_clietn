@@ -8,6 +8,7 @@ import 'swiper/css'
 import 'swiper/css/autoplay'
 import { useWindowSize } from '@/src/shared/hook/useWindowSize'
 import { ReviewsType } from '../../model/type/reviews-type'
+import { useSlider } from '@/src/shared/hook/useSlider'
 
 const ReviewsSlider = ({ data }: { data: ReviewsType }) => {
   return (
@@ -26,19 +27,15 @@ const ReviewsSlider = ({ data }: { data: ReviewsType }) => {
   )
 }
 
+const countSlide = {
+  w768: 1,
+  w1024: 3,
+  wm1024: 4,
+}
+
 export default function Reviews({ data }: { data: ReviewsType[] }) {
-  const [slide, setSlide] = useState<number>(3)
-  const { width } = useWindowSize()
-  
-  useEffect(() => {
-    if (width <= 768) {
-      setSlide(1)
-    } else if (width <= 1024) {
-      setSlide(3)
-    } else if (width >= 1024) {
-      setSlide(4)
-    }
-  }, [width])
+  const { slide } = useSlider(3, countSlide)
+
   return (
     <div className=' relative'>
       <Swiper
