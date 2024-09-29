@@ -29,7 +29,7 @@ export default function Search() {
 
   return (
     <>
-      <div className='relative w-[31vw]'>
+      <div className='relative w-full'>
         <div className=' flex items-center '>
           <input
             value={input}

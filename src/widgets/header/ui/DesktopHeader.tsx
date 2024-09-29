@@ -9,6 +9,7 @@ import { Logo } from '@/src/shared/ui/logo'
 import { Contact } from '@/src/shared/ui/contact-info'
 import { requestConsultationBtn } from '@/src/shared/store/jotai/modal'
 import { signOut, useSession } from 'next-auth/react'
+import Phone from '@/src/shared/ui/contact-info/ui/Phone'
 
 export default function DesktopHeader() {
   const session = useSession()
@@ -28,7 +29,7 @@ export default function DesktopHeader() {
   return (
     <div className='p-2 bg-white ' hidden={!widthWindows}>
       <div className=' flex gap-2 justify-between items-center '>
-        <Logo white={80} />
+        <Logo white={160} />
 
         <ButtonMain
           text={'Каталог'}
@@ -66,12 +67,13 @@ export default function DesktopHeader() {
             </svg>
           }
           action={consulBtn}
-          style='rounded px-2 md:px-4 py-2 border bg-slate-100 flex gap-2 items-center'
+          style='rounded px-2 md:px-4 py-2 border bg-slate-100 flex gap-2 items-center w-[420px]'
           styleIcon='text-slate-700'
-          textStyle='uppercase text-black'
+          textStyle='uppercase text-black text-nowrap'
         />
 
         <Search />
+        <Phone />
 
         <Contact />
 
