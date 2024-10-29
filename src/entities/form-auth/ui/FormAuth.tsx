@@ -21,7 +21,6 @@ export default function FormAuth() {
   const {
     register,
     handleSubmit,
-    reset,
     formState: { errors },
   } = useForm<Person>({
     resolver: zodResolver(schema),

@@ -1,4 +1,3 @@
-
 import { authOptions } from '@/src/shared/lib/config/credentials'
 import { getServerSession } from 'next-auth/next'
 import { redirect } from 'next/navigation'

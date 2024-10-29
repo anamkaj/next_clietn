@@ -1,4 +1,8 @@
+import { env } from 'process'
+
 export default function Phone() {
+  const phone: string = '8 (861) 298-83-60'
+
   return (
     <div className='flex flex-col whitespace-nowrap'>
       <div className='flex items-center gap-2'>
@@ -16,7 +20,7 @@ export default function Phone() {
           </svg>
         </span>
         <a href='tel:+79002689360' className='text-black text-normal font-bold'>
-          8 (861) 298-34-28
+          {phone}
         </a>
       </div>
       <div className='flex items-center gap-2'>

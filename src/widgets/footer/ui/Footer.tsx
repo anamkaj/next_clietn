@@ -1,7 +1,8 @@
-
 import Link from 'next/link'
 
 export default function Footer() {
+  const phone: string = '8 (861) 298-83-60'
+
   return (
     <div className=' container mx-auto relative mt-[820px]'>
       <div className=' absolute bottom-0 bg-slate-100 rounded-t-xl p-4'>
@@ -10,9 +11,9 @@ export default function Footer() {
             <h2 className=' font-semibold text-lg '>Контакты</h2>
             <span className=' font-thin'>
               Задать вопрос или оформить покупку
-            </span>  
+            </span>
             <div className=' mt-4'>
-              <p className=' font-bold text-xl'>8 (861) 298-34-28</p>
+              <p className=' font-bold text-xl'>{phone}</p>
               <p className=' font-bold text-xl'> 8 (900) 268-93-60</p>
             </div>
             <p className=' font-thin text-xl mt-4 '>
